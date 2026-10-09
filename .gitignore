@@ -1,0 +1,10 @@
+__pycache__/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+*.png
+*_pmf.csv
+*_gp.csv
+*_repair.mdp
+*_kbi.csv

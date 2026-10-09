@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kbkit"
+version = "0.1.0"
+description = "Kirkwood-Buff integrals from simulation RDFs with finite-size corrections (Ganguly-van der Vegt, Kruger-Vlugt) and KB thermodynamics: preferential binding, activity derivatives, partial molar volumes, compressibility."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Sibasankar Panigrahy" }]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.21"]
+keywords = ["Kirkwood-Buff", "solvation", "preferential binding", "molecular dynamics", "GROMACS", "finite-size correction", "statistical mechanics"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Intended Audience :: Science/Research", "Topic :: Scientific/Engineering :: Chemistry", "Topic :: Scientific/Engineering :: Physics"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.5"]
+test = ["pytest>=7"]
+
+[project.scripts]
+kbkit = "kbkit.cli:main"
+
+[project.urls]
+Homepage = "https://siba-p.github.io/kbkit/"
+Source = "https://github.com/siba-p/kbkit"
+
+[tool.setuptools.packages.find]
+where = ["src"]
